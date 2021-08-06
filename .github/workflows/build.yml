@@ -35,6 +35,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            The ${{ github.event_name }} event triggered final step.
+            From $GITHUB_WORKFLOW workflow: 
             Package ${{ matrix.pkgs }} build success!
 
