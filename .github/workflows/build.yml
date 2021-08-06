@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v1
       - uses: zjuyk/pkgbuild-aur@master
         with:
           pkg-name: ${{ matrix.pkgs }}
@@ -24,6 +25,6 @@ jobs:
         with:
           allowUpdates: true
           tag: "packages"
-          artifacts: "/home/build/.cache/yay/*/*.zst"
+          artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
 
