@@ -1,0 +1,29 @@
+name: Build Archlinux Packages
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 9,21 * * 1-6' # build pkgs via 996 rules (；′⌒`)
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  Build_AUR: # build AUR packages
+    strategy:
+      matrix:
+        pkgs: [wps-office, plasma5-wallpapers-dynamic] # package list 
+      fail-fast: false # allow package build fails
+    runs-on: ubuntu-latest
+
+    steps:
+      - use: zjuyk/pkgbuild-aur@master
+        with:
+          pkg-name: ${{ matrix.pkgs }}
+      - use: ncipollo/release-action@v1.7.3
+        with:
+          allowUpdates: true
+          tag: "packages"
+          artifacts: "/home/build/.cache/yay/*/*.zst"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
