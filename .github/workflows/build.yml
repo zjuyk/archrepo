@@ -35,6 +35,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            From $GITHUB_WORKFLOW workflow: 
-            Package ${{ matrix.pkgs }} build success!
+            From ${{ github.repository }} / ${{ github.workflow }}: 
+                Package ${{ matrix.pkgs }} build success!
+            [URL](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
