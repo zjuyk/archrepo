@@ -1,0 +1,24 @@
+[__config__]
+oldver = "old_ver.txt"
+newver = "new_ver.txt"
+
+[imgui]
+source = "github"
+github = "ocornut/imgui"
+prefix = "v"
+use_latest_release = true
+
+[plasma5-wallpapers-dynamic]
+source = "github"
+github = "zzag/plasma5-wallpapers-dynamic"
+refix = "v"
+use_latest_release = true
+
+[kwin-script-grid-tiling-git]
+source = "github"
+github = "lingtjien/Grid-Tiling-Kwin"
+
+[wps-office]
+source = "regex"
+regex = "11\\.1\\.0\\.\\d+"
+url = "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/10702/wps-office_11.1.0.10702.XA_amd64.deb"
