@@ -9,7 +9,7 @@ on:
   workflow_dispatch: # allow manual trigger
 
 jobs:
-  Build_AUR: # build AUR packages
+  Build: # build packages
     strategy:
       matrix:
         pkgs: [wps-office, plasma5-wallpapers-dynamic] # package list 
@@ -17,14 +17,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: zjuyk/pkgbuild-aur@master
+      - uses: actions/checkout@master
+      - name: Build pkgs in above list 
+        uses: zjuyk/pkgbuild-aur@master
         with:
           pkg-name: ${{ matrix.pkgs }}
-      - uses: ncipollo/release-action@v1.7.3
+      - name: Upload assets to release
+        uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
           tag: "packages"
           artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Send notify to telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            The ${{ github.event_name }} event triggered final step.
 
