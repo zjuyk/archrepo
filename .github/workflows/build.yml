@@ -36,4 +36,5 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             The ${{ github.event_name }} event triggered final step.
+            Package ${{ matrix.pkgs }} build success!
 
