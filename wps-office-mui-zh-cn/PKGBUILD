@@ -8,14 +8,12 @@ pkgname=('wps-office-mui-zh-cn')
 pkgver=11.1.0.10702
 pkgrel=1
 pkgdesc="Chinese (Simplified) mui package for WPS Office"
-arch=('x86_64' 'aarch64')
+arch=('x86_64')
 license=('custom')
 url="https://linux.wps.cn"
 options=('!emptydirs')
-source_x86_64=("https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${pkgver##*.}/wps-office_${pkgver}_amd64.deb")
-source_aarch64=("https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${pkgver##*.}/wps-office_${pkgver}_arm64.deb")
-sha1sums_x86_64=('d786fcbcdfd83915f5f242b74cc27fd38422352a')
-sha1sums_aarch64=('1ba32549d604eb80dbdda5bbf6ed57b9a0a150a0')
+source=("https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${pkgver##*.}/wps-office_${pkgver}_amd64.deb")
+sha1sums=('d786fcbcdfd83915f5f242b74cc27fd38422352a')
 
 prepare() {
     bsdtar -xpf data.tar.xz
