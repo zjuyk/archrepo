@@ -1,9 +1,6 @@
 name: Build Archlinux Packages
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     - cron: '0 9,21 * * 1-6' # build pkgs via 996 rules (；′⌒`)
   workflow_dispatch: # allow manual trigger
@@ -20,6 +17,7 @@ jobs:
       - uses: actions/checkout@master
         with:
           submodules: true
+          ssh-key: ${{ secrets.SSH_KEY }}
       - name: Build pkgs in above list 
         uses: zjuyk/pkgbuild-aur@master
         with:
