@@ -1,3 +1,9 @@
 [submodule "imgui"]
 	path = imgui
 	url = ssh://aur@aur.archlinux.org/imgui.git
+[submodule "kwin-script-grid-tiling-git"]
+	path = kwin-script-grid-tiling-git
+	url = ssh://aur@aur.archlinux.org/kwin-script-grid-tiling-git.git
+[submodule "plasma5-wallpapers-dynamic"]
+	path = plasma5-wallpapers-dynamic
+	url = ssh://aur@aur.archlinux.org/plasma5-wallpapers-dynamic.git
