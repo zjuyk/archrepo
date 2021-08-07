@@ -21,6 +21,7 @@ jobs:
         with:
           submodules: true
           ssh-key: ${{ secrets.SSH_KEY }}
+          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
       - name: Build pkgs in above list 
         uses: zjuyk/pkgbuild-aur@master
         with:
