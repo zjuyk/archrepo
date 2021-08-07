@@ -1,9 +1,9 @@
 name: Build Archlinux Packages
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #  branches:
+  #    - master
   schedule:
     - cron: '0 9,21 * * 1-6' # build pkgs via 996 rules (；′⌒`)
   workflow_dispatch: # allow manual trigger
@@ -38,8 +38,9 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
           message: |
             From ${{ github.repository }} - ${{ github.workflow }}: 
                 Package ${{ matrix.pkgs }} build success!
-                # [URL](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            [View it On Github](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
