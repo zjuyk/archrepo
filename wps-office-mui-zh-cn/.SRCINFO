@@ -1,0 +1,15 @@
+pkgbase = wps-office-mui-zh-cn
+	pkgdesc = Chinese (Simplified) mui package for WPS Office
+	pkgver = 11.1.0.10702
+	pkgrel = 1
+	url = https://linux.wps.cn
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	options = !emptydirs
+	source_x86_64 = https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10702/wps-office_11.1.0.10702_amd64.deb
+	sha1sums_x86_64 = d786fcbcdfd83915f5f242b74cc27fd38422352a
+	source_aarch64 = https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10702/wps-office_11.1.0.10702_arm64.deb
+	sha1sums_aarch64 = 1ba32549d604eb80dbdda5bbf6ed57b9a0a150a0
+
+pkgname = wps-office-mui-zh-cn

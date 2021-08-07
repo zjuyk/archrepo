@@ -12,12 +12,14 @@ jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkgs: [wps-office, plasma5-wallpapers-dynamic, imgui, kwin-script-grid-tiling-git, index-generator, xwinwrap-git] # package list 
+        pkgs: [wps-office, plasma5-wallpapers-dynamic, imgui, kwin-script-grid-tiling-git, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, nordic-kde-git, mesen-git] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@master
+        with:
+          submodules: true
       - name: Build pkgs in above list 
         uses: zjuyk/pkgbuild-aur@master
         with:
