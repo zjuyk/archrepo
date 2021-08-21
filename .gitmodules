@@ -1,6 +1,3 @@
-[submodule "imgui"]
-	path = imgui
-	url = ssh://aur@aur.archlinux.org/imgui.git
 [submodule "kwin-script-grid-tiling-git"]
 	path = kwin-script-grid-tiling-git
 	url = ssh://aur@aur.archlinux.org/kwin-script-grid-tiling-git.git
@@ -10,3 +7,6 @@
 [submodule "index-generator"]
 	path = index-generator
 	url = ssh://aur@aur.archlinux.org/index-generator.git
+[submodule "imgui"]
+	path = imgui
+	url = ssh://aur@aur.archlinux.org/imgui.git
