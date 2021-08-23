@@ -12,7 +12,7 @@ jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkgs: [wps-office, plasma5-wallpapers-dynamic, imgui, kwin-script-grid-tiling-git, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, nordic-kde-git, mesen-git, flashplayer-standalone, kwin-scripts-parachute, fisher, git-delta-git, ao, code-transparent, pycharm-professional ] # package list 
+        pkgs: [wps-office, imgui, kwin-script-grid-tiling-git, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, flashplayer-standalone, pycharm-professional ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
 
