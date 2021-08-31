@@ -6,7 +6,7 @@
 
 pkgname=('wps-office-mui-zh-cn')
 pkgver=11.1.0.10702
-pkgrel=1
+pkgrel=2
 pkgdesc="Chinese (Simplified) mui package for WPS Office"
 arch=('x86_64')
 license=('custom')

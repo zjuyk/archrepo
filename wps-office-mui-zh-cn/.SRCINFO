@@ -1,7 +1,7 @@
 pkgbase = wps-office-mui-zh-cn
 	pkgdesc = Chinese (Simplified) mui package for WPS Office
 	pkgver = 11.1.0.10702
-	pkgrel = 1
+	pkgrel = 2
 	url = https://linux.wps.cn
 	arch = x86_64
 	license = custom
