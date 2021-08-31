@@ -10,3 +10,6 @@
 [submodule "imgui"]
 	path = imgui
 	url = ssh://aur@aur.archlinux.org/imgui.git
+[submodule "xwinwrap-git"]
+	path = xwinwrap-git
+	url = ssh://aur@aur.archlinux.org/xwinwrap-git.git
