@@ -13,3 +13,9 @@
 [submodule "xwinwrap-git"]
 	path = xwinwrap-git
 	url = ssh://aur@aur.archlinux.org/xwinwrap-git.git
+[submodule "ttf-material-design-iconic-font"]
+	path = ttf-material-design-iconic-font
+	url = ssh://aur@aur.archlinux.org/ttf-material-design-iconic-font.git
+[submodule "python-image-go-nord"]
+	path = python-image-go-nord
+	url = ssh://aur@aur.archlinux.org/python-image-go-nord.git
