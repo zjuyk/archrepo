@@ -15,7 +15,19 @@ jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkgs: [wps-office, imgui, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, flashplayer-standalone, pycharm-professional, python-image-go-nord, ttf-material-design-iconic-font, kwin-script-grid-tiling-git ] # package list 
+        pkgs: [
+          wps-office, 
+          imgui, 
+          index-generator, 
+          xwinwrap-git, 
+          wps-office-mui-zh-cn, 
+          ttf-wps-fonts, 
+          flashplayer-standalone, 
+          pycharm-professional, 
+          python-image-go-nord, 
+          ttf-material-design-iconic-font, 
+          kwin-script-grid-tiling-git 
+        ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
 
@@ -25,10 +37,12 @@ jobs:
           submodules: true
           ssh-key: ${{ secrets.SSH_KEY }}
           ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
       - name: Build pkgs in above list 
         uses: zjuyk/pkgbuild-aur@master
         with:
           pkg-name: ${{ matrix.pkgs }}
+
       - name: Upload assets to release
         uses: ncipollo/release-action@v1
         with:
@@ -36,6 +50,7 @@ jobs:
           tag: "packages"
           artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Send notify to telegram
         uses: appleboy/telegram-action@master
         with:
