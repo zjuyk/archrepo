@@ -15,7 +15,7 @@ jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkgs: [wps-office, imgui, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, flashplayer-standalone, pycharm-professional, python-image-go-nord, ttf-material-design-iconic-font ] # package list 
+        pkgs: [wps-office, imgui, index-generator, xwinwrap-git, wps-office-mui-zh-cn, ttf-wps-fonts, flashplayer-standalone, pycharm-professional, python-image-go-nord, ttf-material-design-iconic-font, kwin-script-grid-tiling-git ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
 
