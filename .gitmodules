@@ -19,3 +19,6 @@
 [submodule "python-image-go-nord"]
 	path = python-image-go-nord
 	url = ssh://aur@aur.archlinux.org/python-image-go-nord.git
+[submodule "dingtalk-bin"]
+	path = dingtalk-bin
+	url = ssh://aur@aur.archlinux.org/dingtalk-bin.git
