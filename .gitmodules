@@ -37,6 +37,3 @@
 [submodule "wps-office"]
 	path = wps-office
 	url = https://aur.archlinux.org/wps-office.git
-[submodule "wps-office-mui-zh-cn"]
-	path = wps-office-mui-zh-cn
-	url = https://aur.archlinux.org/wps-office-cn.git
