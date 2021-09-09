@@ -31,3 +31,9 @@
 [submodule "pycharm-professional"]
 	path = pycharm-professional
 	url = https://aur.archlinux.org/pycharm-professional.git
+[submodule "ttf-wps-fonts"]
+	path = ttf-wps-fonts
+	url = https://aur.archlinux.org/ttf-wps-fonts.git
+[submodule "wps-office"]
+	path = wps-office
+	url = https://aur.archlinux.org/wps-office.git
