@@ -22,3 +22,6 @@
 [submodule "dingtalk-bin"]
 	path = dingtalk-bin
 	url = ssh://aur@aur.archlinux.org/dingtalk-bin.git
+[submodule "google-chrome"]
+	path = google-chrome
+	url = https://aur.archlinux.org/google-chrome.git
