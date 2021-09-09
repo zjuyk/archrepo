@@ -27,7 +27,8 @@ jobs:
           python-image-go-nord, 
           ttf-material-design-iconic-font, 
           kwin-script-grid-tiling-git,
-          dingtalk-bin
+          dingtalk-bin,
+          google-chrome
         ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
