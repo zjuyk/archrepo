@@ -28,3 +28,6 @@
 [submodule "flashplayer-standalone"]
 	path = flashplayer-standalone
 	url = https://aur.archlinux.org/flashplayer-standalone.git
+[submodule "pycharm-professional"]
+	path = pycharm-professional
+	url = https://aur.archlinux.org/pycharm-professional.git
