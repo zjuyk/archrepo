@@ -1,0 +1,43 @@
+# Maintainer: Astro Benzene <universebenzene at sina dot com>
+# Contributor: Felix Yan <felixonmars@archlinux.org>
+# Contributor: Ouyang Jun <ouyangjun1999@gmail.com>
+# Contributor: Jove Yu <yushijun110 [at] gmail.com>
+# Contributor: Ariel AxionL <axionl at aosc dot io>
+
+pkgname=wps-office-mui-zh-cn
+pkgver=11.1.0.10702
+pkgrel=2
+pkgdesc="Chinese (Simplified) mui package for WPS Office"
+arch=('x86_64')
+license=('custom')
+url="https://linux.wps.cn"
+options=('!emptydirs')
+source=("https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/${pkgver##*.}/wps-office_${pkgver}_amd64.deb")
+sha1sums=('d786fcbcdfd83915f5f242b74cc27fd38422352a')
+
+prepare() {
+    bsdtar -xpf data.tar.xz
+
+    cd "${srcdir}/usr/bin"
+    sed -i 's|/opt/kingsoft/wps-office|/usr/lib|' *
+
+    cd "${srcdir}/usr/share/icons/hicolor"
+    for _file in ./*; do
+        if [ -e ${_file}/mimetypes/wps-office2019-etmain.png ]; then
+            mkdir -p ${_file}/apps
+            cp -p ${_file}/mimetypes/wps-office2019* ${_file}/apps
+        fi
+    done
+}
+
+package() {
+    cd "${srcdir}/opt/kingsoft/wps-office/office6/mui"
+
+    install -d "${pkgdir}/usr/lib/office6/mui/en_US/resource"
+    cp -r en_US/resource/help "${pkgdir}/usr/lib/office6/mui/en_US/resource"
+    cp -r zh_CN "${pkgdir}/usr/lib/office6/mui"
+
+    cd "${srcdir}/opt/kingsoft/wps-office/"
+    install -Dm644 -t "${pkgdir}/usr/share/licenses/${pkgname}" office6/mui/default/*.html
+}
+
