@@ -43,3 +43,6 @@
 [submodule "code-marketplace"]
 	path = code-marketplace
 	url = https://aur.archlinux.org/code-marketplace.git
+[submodule "mdbook-toc"]
+	path = mdbook-toc
+	url = https://aur.archlinux.org/mdbook-toc.git

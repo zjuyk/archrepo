@@ -30,7 +30,8 @@ jobs:
           dingtalk-bin,
           google-chrome,
           nvim-packer-git,
-          code-marketplace
+          code-marketplace,
+          mdbook-toc
         ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
