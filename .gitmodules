@@ -37,3 +37,9 @@
 [submodule "wps-office"]
 	path = wps-office
 	url = https://aur.archlinux.org/wps-office.git
+[submodule "nvim-packer-git"]
+	path = nvim-packer-git
+	url = https://aur.archlinux.org/nvim-packer-git.git
+[submodule "code-marketplace"]
+	path = code-marketplace
+	url = https://aur.archlinux.org/code-marketplace.git

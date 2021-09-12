@@ -28,7 +28,9 @@ jobs:
           ttf-material-design-iconic-font, 
           kwin-script-grid-tiling-git,
           dingtalk-bin,
-          google-chrome
+          google-chrome,
+          nvim-packer-git,
+          code-marketplace
         ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
