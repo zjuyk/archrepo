@@ -15,8 +15,7 @@ jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkgs: [
-          wps-office, 
+        pkgs: [ 
           imgui, 
           index-generator, 
           xwinwrap-git, 
