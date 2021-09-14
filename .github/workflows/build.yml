@@ -4,8 +4,8 @@ on:
   # push:
   #  branches:
   #    - master
-  schedule:
-    - cron: '0 1,13 * * 1-6' # build pkgs via 996 rules (；′⌒`)
+  #schedule:
+  #  - cron: '0 1,13 * * 1-6' # build pkgs via 996 rules (；′⌒`)
   workflow_dispatch: # allow manual trigger
 
 env:
