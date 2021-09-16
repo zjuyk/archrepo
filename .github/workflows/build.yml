@@ -1,9 +1,9 @@
 name: Build Archlinux Packages
 
 on:
-  push:
-    branches:
-      - master
+  #push:
+  #  branches:
+  #    - master
   #schedule:
   #  - cron: '0 1,13 * * 1-6' # build pkgs via 996 rules (；′⌒`)
   workflow_dispatch: # allow manual trigger
@@ -29,9 +29,7 @@ jobs:
           dingtalk-bin,
           google-chrome,
           nvim-packer-git,
-          code-marketplace,
-          mdbook-toc,
-          wps-office
+          code-marketplace
         ] # package list 
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
