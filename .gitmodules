@@ -43,3 +43,6 @@
 [submodule "mdbook-toc"]
 	path = mdbook-toc
 	url = https://aur.archlinux.org/mdbook-toc.git
+[submodule "wps-office"]
+	path = wps-office
+	url = https://aur.archlinux.org/wps-office.git
