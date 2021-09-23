@@ -46,3 +46,6 @@
 [submodule "wps-office"]
 	path = wps-office
 	url = https://aur.archlinux.org/wps-office.git
+[submodule "nordic-wallpapers"]
+	path = nordic-wallpapers
+	url = ssh://aur@aur.archlinux.org/nordic-wallpapers.git
